@@ -32,7 +32,7 @@ import android.view.SoundEffectConstants;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.OverScroller;
-
+import android.util.Log;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -732,6 +732,10 @@ public class WeekView extends View {
 
             // Draw the day labels.
             String dayLabel = getDateTimeInterpreter().interpretDate(day);
+            
+            Log.i("bilbilak",dayLabel);
+            
+            
             if (dayLabel == null)
                 throw new IllegalStateException("A DateTimeInterpreter must not return null date");
             canvas.drawText(dayLabel, startPixel + mWidthPerDay / 2, mHeaderTextHeight + mHeaderRowPadding, sameDay ? mTodayHeaderTextPaint : mHeaderTextPaint);
