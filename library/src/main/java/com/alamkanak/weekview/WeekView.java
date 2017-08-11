@@ -732,7 +732,7 @@ public class WeekView extends View {
 
             // Draw the day labels.
             String dayLabel = getDateTimeInterpreter().interpretDate(day);
-            
+            system.out.println(dayLabel);
             
             
             if (dayLabel == null)
